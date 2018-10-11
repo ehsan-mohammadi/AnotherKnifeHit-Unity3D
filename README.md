@@ -10,7 +10,7 @@ This project have been built in Unity 5.5.1f1.
 
 ## How to Get Started
 
-Open the game folder, AnotherKnifeHit-Unity3D, in Unity and try the game in the Play mode. Use left mouse click to throw the knives.
+Open the game folder, AnotherKnifeHit-Unity3D, in Unity and try the game in the Play mode. Use left mouse button to throw the knives.
 
 ## License
 
