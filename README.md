@@ -1,4 +1,4 @@
-# AnotherKnifeHit - Special Topics 97-98
+# AnotherKnifeHit - Game Development 97-98
 
 > C# Game Development in Unity®
 
