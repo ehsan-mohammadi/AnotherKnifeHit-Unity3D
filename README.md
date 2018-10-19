@@ -15,6 +15,7 @@ Open the game folder, AnotherKnifeHit-Unity3D, in Unity and try the game in the 
 ## TODO
 
 - [x] Add hit sound
+- [x] Add animations
 - [x] Add Trunk damage
 - [x] Add levels
 - [ ] Add Trunk fragmentation sound
