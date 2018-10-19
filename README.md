@@ -12,6 +12,15 @@ This project have been built in Unity 5.5.1f1.
 
 Open the game folder, AnotherKnifeHit-Unity3D, in Unity and try the game in the Play mode. Use left mouse button to throw the knives.
 
+## TODO
+
+- [x] Add hit sound
+- [x] Add Trunk damage
+- [x] Add levels
+- [ ] Add Trunk fragmentation sound
+- [ ] Add next level sound
+- [ ] Add game over
+
 ## License
 
 [MIT © Ehsan Mohammadi.](../master/LICENSE)
