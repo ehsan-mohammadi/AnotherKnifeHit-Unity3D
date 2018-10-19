@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TrunkRotate : MonoBehaviour {
 
+    public float speed = -1.5f;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -13,6 +15,6 @@ public class TrunkRotate : MonoBehaviour {
 	void Update () 
     {
         // Rotate Trunk in Z axis
-        transform.Rotate(new Vector3(0, 0, -1.5f));
+        transform.Rotate(new Vector3(0, 0, speed));
 	}
 }
