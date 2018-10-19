@@ -7,13 +7,17 @@ public class Knife : MonoBehaviour {
     public float speed = 20f;
     public AudioClip hitSound;
     Rigidbody2D knifeRigid;
-    bool moving = true;
+    bool moving = false;
+
+    GameObject spawn;
 
 	// Use this for initialization
 	void Start () 
     {
         // Identify Rigidbody
         knifeRigid = GetComponent<Rigidbody2D>();
+
+        spawn = GameObject.Find("Spawn");
 	}
 	
 	// Update is called once per frame
@@ -21,6 +25,10 @@ public class Knife : MonoBehaviour {
     {
         if(moving)
             knifeRigid.MovePosition(knifeRigid.position + Vector2.up * speed * Time.deltaTime);
+
+        // Knife start moving after click
+        if (Input.GetMouseButtonDown(0))
+            moving = true;
 	}
 
     void OnTriggerEnter2D(Collider2D collider)
@@ -29,5 +37,9 @@ public class Knife : MonoBehaviour {
         moving = false;
         transform.parent = collider.transform;
         GetComponent<AudioSource>().PlayOneShot(hitSound);
+        spawn.GetComponent<SpawnController>().CreateKnife();
+        collider.GetComponent<Animator>().SetTrigger("Hit");
+        collider.GetComponent<TrunkHealth>().Damage(1);
+        GetComponent<Knife>().enabled = false;
     }
 }
