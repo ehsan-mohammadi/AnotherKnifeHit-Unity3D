@@ -2,7 +2,7 @@
 
 > C# Game Development in Unity®
 
-![image](https://github.com/ehsan-mohammadi/AnotherKnifeHit-Unity3D/blob/master/GIF/Image.gif)
+![image](https://github.com/ehsan-mohammadi/AnotherKnifeHit-Unity3D/blob/master/GIF/Image2.gif)
 
 A simple project made with Unity® game engine in C#.
 
