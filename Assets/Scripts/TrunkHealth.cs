@@ -5,9 +5,16 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class TrunkHealth : MonoBehaviour {
+public class TrunkHealth : MonoBehaviour
+{
 
     public int health = 5;
+    public int level = 1;
+
+    void Start()
+    {
+        GameObject.Find("TextLevel").GetComponent<Text>().text = "Level" + level;
+    }
 
     void Update()
     {
@@ -15,7 +22,7 @@ public class TrunkHealth : MonoBehaviour {
     }
 
     // Decrease health
-	public void Damage(int value)
+    public void Damage(int value)
     {
         health -= value;
 
@@ -52,14 +59,14 @@ public class TrunkHealth : MonoBehaviour {
 
             // Show "YOU WIN!" and go to next level
             GameObject.Find("TextMessage").GetComponent<Text>().text = "YOU WIN!";
-            StartCoroutine(NextLevel());
+            StartCoroutine(NextLevel(level + 1));
         }
     }
 
-    IEnumerator NextLevel()
+    IEnumerator NextLevel(int level)
     {
         // Go to next level after 2 seconds
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene("Level2");
+        SceneManager.LoadScene("Level" + level);
     }
 }
