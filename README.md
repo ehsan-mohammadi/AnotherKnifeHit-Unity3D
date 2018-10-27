@@ -18,9 +18,11 @@ Open the game folder, AnotherKnifeHit-Unity3D, in Unity and try the game in the 
 - [x] Add animations
 - [x] Add Trunk damage
 - [x] Add levels
-- [ ] Add Trunk fragmentation sound
+- [x] Add Trunk fragmentation sound
 - [ ] Add next level sound
 - [ ] Add game over
+- [ ] Add UI and Menu
+- [ ] Add Save and Load
 
 ## License
 
