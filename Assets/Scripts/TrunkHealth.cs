@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class TrunkHealth : MonoBehaviour {
 
     public int health = 5;
+    public AudioClip breakClip;
 
     void Update()
     {
@@ -49,6 +50,8 @@ public class TrunkHealth : MonoBehaviour {
                 transform.GetChild(0).GetComponent<Rigidbody2D>().AddTorque(Random.Range(-400, 400));
                 transform.GetChild(0).parent = null;
             }
+
+            GetComponent<AudioSource>().PlayOneShot(breakClip);
 
             // Show "YOU WIN!" and go to next level
             GameObject.Find("TextMessage").GetComponent<Text>().text = "YOU WIN!";
