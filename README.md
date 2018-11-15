@@ -2,7 +2,7 @@
 
 > C# Game Development in Unity®
 
-![image](https://github.com/ehsan-mohammadi/AnotherKnifeHit-Unity3D/blob/master/GIF/Image2.gif)
+![image](https://github.com/ehsan-mohammadi/AnotherKnifeHit-Unity3D/blob/master/GIF/Image3.gif)
 
 A simple project made with Unity® game engine in C#.
 
@@ -22,7 +22,7 @@ Open the game folder, AnotherKnifeHit-Unity3D, in Unity and try the game in the 
 - [x] Add game over
 - [x] Add UI and Menu
 - [x] Add Save and Load
-- [ ] Add next level sound
+- [x] Add next level sound
 
 ## License
 
