@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 public class Knife : MonoBehaviour {
 
     public float speed = 20f;
@@ -53,6 +56,8 @@ public class Knife : MonoBehaviour {
                 collider.GetComponent<TrunkHealth>().Damage(1);
 
                 Instantiate(particle, transform.position + transform.up * 0.25f, Quaternion.identity);
+
+                GameController.SetScore(10);
             }
             else
             {
@@ -60,10 +65,20 @@ public class Knife : MonoBehaviour {
                 moving = false;
                 knifeRigid.bodyType = RigidbodyType2D.Dynamic;
                 GetComponent<AudioSource>().PlayOneShot(fail);
+                GameObject.Find("TextMessage").GetComponent<Text>().text = "GAME OVER";
+                GameController.SaveHighScore();
+                StartCoroutine(GoToLevel1());
             }
 
             scriptEnabled = false;
             GetComponent<Knife>().enabled = false;
         }
+    }
+
+    IEnumerator GoToLevel1()
+    {
+        // Go to level 1 after 2 seconds
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("Level1");
     }
 }
