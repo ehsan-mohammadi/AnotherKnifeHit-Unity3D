@@ -9,6 +9,12 @@ public class TrunkHealth : MonoBehaviour {
 
     public int health = 5;
     public AudioClip breakClip;
+    public AudioClip startClip;
+
+    void Start()
+    {
+        GetComponent<AudioSource>().PlayOneShot(startClip);
+    }
 
     void Update()
     {
@@ -63,6 +69,6 @@ public class TrunkHealth : MonoBehaviour {
     {
         // Go to next level after 2 seconds
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene("Level2");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
