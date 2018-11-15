@@ -29,6 +29,11 @@ public class GameController : MonoBehaviour
             highScore = score;
     }
 
+    public static void ResetScore()
+    {
+        score = 0;
+    }
+
     public static int GetScore()
     {
         return score;

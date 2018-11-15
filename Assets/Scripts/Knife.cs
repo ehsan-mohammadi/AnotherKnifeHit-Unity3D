@@ -67,6 +67,7 @@ public class Knife : MonoBehaviour {
                 GetComponent<AudioSource>().PlayOneShot(fail);
                 GameObject.Find("TextMessage").GetComponent<Text>().text = "GAME OVER";
                 GameController.SaveHighScore();
+                GameController.ResetScore();
                 StartCoroutine(GoToLevel1());
             }
 
